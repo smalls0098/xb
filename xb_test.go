@@ -15,11 +15,9 @@ func Test_Encode(t *testing.T) {
 		uint32(ts),
 	)
 	t.Log(res, res == "DFSzswVO/72ANVartLGTYN7TlqCM")
-	// DFSzswVO/72ANVartLGTYN7TlqCM &{Logo:64 Key:[0 1 14] ParamsHash:[74 117] DataHash:[69 63] UAHash:[183 184] Ts:1710927309 Fixed:3845494467 XorHash:127}
-	// DFSzswVu/72ANHyjtLGTYN7TlqCG &{Logo:64 Key:[0 1 8] ParamsHash:[74 117] DataHash:[69 63] UAHash:[68 123] Ts:1710927309 Fixed:3845494467 XorHash:73}
 }
 
-func Test_XBogus2(t *testing.T) {
+func Test_Decode(t *testing.T) {
 	res, err := Decode("DFSzswVO/72ANVartLGTYN7TlqCM")
 	if err != nil {
 		t.Fatal(err)
